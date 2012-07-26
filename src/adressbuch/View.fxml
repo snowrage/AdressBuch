@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="adressbuch.ViewController">
+  <children>
+    <GridPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox id="HBox" alignment="TOP_CENTER" prefWidth="600.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <Label text="Adressbuch">
+              <font>
+                <Font name="System Bold" size="24.0" />
+              </font>
+            </Label>
+          </children>
+          <maxWidth>
+            <Long fx:value="-1" />
+          </maxWidth>
+          <prefHeight>
+            <Long fx:value="44" />
+          </prefHeight>
+          <spacing>
+            <Long fx:value="0" />
+          </spacing>
+        </HBox>
+        <TableView fx:id="table" prefHeight="300.0" prefWidth="570.0" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+          <columns>
+            <TableColumn text="Vorname" fx:id="firstNameColumn">
+              <minWidth>
+                <Long fx:value="100" />
+              </minWidth>
+              <prefWidth>
+                <Long fx:value="189" />
+              </prefWidth>
+            </TableColumn>
+            <TableColumn text="Nachname" fx:id="nameColumn">
+              <minWidth>
+                <Long fx:value="100" />
+              </minWidth>
+              <prefWidth>
+                <Long fx:value="189" />
+              </prefWidth>
+            </TableColumn>
+            <TableColumn text="E-Mail" fx:id="mailColumn">
+              <minWidth>
+                <Long fx:value="100" />
+              </minWidth>
+              <prefWidth>
+                <Long fx:value="190" />
+              </prefWidth>
+            </TableColumn>
+          </columns>
+          <GridPane.margin>
+            <Insets left="15.0" right="15.0" fx:id="x2" />
+          </GridPane.margin>
+        </TableView>
+        <GridPane GridPane.columnIndex="0" GridPane.rowIndex="3">
+          <children>
+            <TextField fx:id="firstNameEdit" prefWidth="200.0" promptText="Vorname" GridPane.columnIndex="0" GridPane.rowIndex="0">
+              <stylesheets>
+                <URL value="@view.css" />
+              </stylesheets>
+            </TextField>
+            <TextField fx:id="nameEdit" prefWidth="200.0" promptText="Nachname" GridPane.columnIndex="1" GridPane.rowIndex="0">
+              <stylesheets>
+                <URL value="@view.css" />
+              </stylesheets>
+            </TextField>
+            <TextField fx:id="emailEdit" prefWidth="200.0" promptText="E-Mail" GridPane.columnIndex="2" GridPane.rowIndex="0">
+              <stylesheets>
+                <URL value="@view.css" />
+              </stylesheets>
+            </TextField>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+          <GridPane.margin>
+            <Insets left="15.0" right="15.0" fx:id="x2" />
+          </GridPane.margin>
+        </GridPane>
+        <HBox alignment="CENTER_LEFT" padding="$x2" prefHeight="44.0" prefWidth="600.0" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+          <children>
+            <Button mnemonicParsing="false" onMouseClicked="#newButtonClicked" text="Eintrag hinzufügen">
+              <HBox.margin>
+                <Insets fx:id="x1" />
+              </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#deleteButtonClicked" text="Eintrag löschen" HBox.margin="$x1" />
+            <Button mnemonicParsing="false" onMouseClicked="#saveButtonClicked" text="Eintrag speichern" HBox.margin="$x1" />
+          </children>
+          <spacing>
+            <Long fx:value="10" />
+          </spacing>
+        </HBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints fillHeight="false" maxHeight="132.0" minHeight="10.0" prefHeight="38.0" vgrow="NEVER" />
+        <RowConstraints fillHeight="false" maxHeight="308.0" minHeight="10.0" prefHeight="33.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="327.0" minHeight="50.0" prefHeight="295.0" valignment="CENTER" vgrow="ALWAYS" />
+        <RowConstraints fillHeight="false" maxHeight="133.0" minHeight="10.0" prefHeight="34.0" vgrow="NEVER" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <layoutX>
+    <Long fx:value="0" />
+  </layoutX>
+  <layoutY>
+    <Long fx:value="0" />
+  </layoutY>
+  <minHeight>
+    <Long fx:value="-1" />
+  </minHeight>
+  <prefHeight>
+    <Long fx:value="400" />
+  </prefHeight>
+  <prefWidth>
+    <Long fx:value="600" />
+  </prefWidth>
+  <stylesheets>
+    <URL value="@view.css" />
+  </stylesheets>
+</AnchorPane>
