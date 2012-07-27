@@ -57,7 +57,8 @@ public class ViewController
 
     // Handler for Button[Button[id=null, styleClass=button]] onMouseClicked
     public void saveButtonClicked(MouseEvent event) {
-        // handle the event here
+        ObservableList<Person> data = (ObservableList<Person>) table.getItems();
+        Utilities.saveBinary(data);
     }
 
     @Override // This method is called by the FXMLLoader when initialization is complete
