@@ -81,6 +81,8 @@ public class ViewController
         mailColumn.setCellValueFactory(
             new PropertyValueFactory<Person,String>("email")
         );
+        
+        table.setItems(Utilities.loadBinary());
     }
 
 }
