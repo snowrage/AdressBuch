@@ -19,6 +19,9 @@
               <font>
                 <Font name="System Bold" size="24.0" />
               </font>
+              <stylesheets>
+                <URL value="@view.css" />
+              </stylesheets>
             </Label>
           </children>
           <maxWidth>
